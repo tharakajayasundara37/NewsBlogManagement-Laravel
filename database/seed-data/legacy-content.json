@@ -1,0 +1,186 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "category_name": "Technology",
+      "slug": "",
+      "description": "Category description for Technology",
+      "status": "active",
+      "created_at": "2025-10-20 06:16:24",
+      "updated_at": "2025-12-10 11:02:28"
+    },
+    {
+      "id": 2,
+      "category_name": "Sports",
+      "slug": -2,
+      "description": "Category description for Sports",
+      "status": "active",
+      "created_at": "2025-10-20 06:16:24",
+      "updated_at": "2025-12-10 11:02:29"
+    },
+    {
+      "id": 3,
+      "category_name": "Sigiriya",
+      "slug": "sigiriya",
+      "description": "Category description for Education",
+      "status": "active",
+      "created_at": "2025-10-20 06:16:24",
+      "updated_at": "2025-12-11 13:08:36"
+    },
+    {
+      "id": 5,
+      "category_name": "Health",
+      "slug": -5,
+      "description": "Category description for Health",
+      "status": "active",
+      "created_at": "2025-10-20 06:16:24",
+      "updated_at": "2025-12-10 11:02:29"
+    },
+    {
+      "id": 6,
+      "category_name": "Science",
+      "slug": -6,
+      "description": "Category description for Science",
+      "status": "active",
+      "created_at": "2025-10-20 09:05:13",
+      "updated_at": "2025-12-10 11:02:29"
+    },
+    {
+      "id": 8,
+      "category_name": "Entertainment",
+      "slug": -8,
+      "description": "Category description for Entertainment",
+      "status": "active",
+      "created_at": "2025-10-20 09:05:13",
+      "updated_at": "2025-12-10 11:02:29"
+    },
+    {
+      "id": 15,
+      "category_name": "Best Travaling Places in Sri Lanka",
+      "slug": "best-travaling-places-in-sri-lanka",
+      "description": "Visit Sri Lanka",
+      "status": "active",
+      "created_at": "2025-12-11 06:21:33",
+      "updated_at": "2025-12-11 06:21:33"
+    },
+    {
+      "id": 16,
+      "category_name": "Natural Disasters",
+      "slug": "natural-disasters",
+      "description": "Please Save Your Life",
+      "status": "active",
+      "created_at": "2025-12-11 06:42:39",
+      "updated_at": "2025-12-11 06:42:39"
+    }
+  ],
+  "posts": [
+    {
+      "id": 31,
+      "title": "Srilanka: Cyclone Ditwah’s Impact on Agriculture, Peasantry and Food Sovereignty",
+      "content": "Cyclone Ditwah is the largest and most challenging natural disaster in our nation’s history after Tsunami. In a way it represents far more than a catastrophic weather event. It exposes the deep structural vulnerabilities in Sri Lanka’s agrarian system; vulnerabilities rooted in colonial exploitation, unjust land relations, and the systematic neglect of peasant agriculture.rnrnThe scale of agricultural destruction is unprecedented. Government data confirms 108,000 hectares of rice paddies completely destroyed, 11,000 hectares of other field crops lost, 6,600 hectares of maize obliterated, and 6,143 hectares of vegetables wiped out entirely. These are not merely statistics they represent the livelihoods, food security, and survival of hundreds of thousands of farming families.rnrnThe timing magnifies the tragedy.",
+      "image": "posts/1765458001_image1170x530cropped.webp",
+      "category_id": 16,
+      "author_id": 5,
+      "status": "published",
+      "created_date": "2025-12-11 13:00:01",
+      "updated_date": "2025-12-11 13:00:01",
+      "published_date": null
+    },
+    {
+      "id": 32,
+      "title": "Covid-19 vaccination substantially lowered risks for children last season, CDC report says",
+      "content": "Children who were vaccinated against Covid-19 last season had a “substantially lower risk” of emergency department and urgent care visits related to the virus, according to a report published Thursday by the US Centers for Disease Control and Prevention.rnrnThe vaccines were about 76% effective in preventing these outcomes among healthy children ages 9 months to 4 years and about 56% effective among children ages 5 to 17 compared with those who did not receive an updated vaccine for the 2024-25 respiratory virus season, the report said.rnrnThe federal analysis was based on data from about 98,000 children who tested positive for Covid when they visited an emergency department or urgent care between late August 2024 and early September 2025. Visits were captured from 250 emergency departments and urgent cares across nine states that participate in a research collaboration that the CDC is involved in.rnrnOutcomes for children who received the updated vaccine for the 2024-25 respiratory virus season were compared with those who had not received the latest shot but may have had earlier series.",
+      "image": "posts/1765528126_get.jpg",
+      "category_id": 5,
+      "author_id": 8,
+      "status": "published",
+      "created_date": "2025-12-12 08:28:46",
+      "updated_date": "2025-12-12 08:28:46",
+      "published_date": null
+    },
+    {
+      "id": 34,
+      "title": "Berry Good for Your Heart",
+      "content": "Berries and Heart Health:rnBerries are not only delicious but also packed with antioxidants, which help protect your cells from damage and support heart health. They are most beneficial when eaten fresh or frozen, rather than dried or in supplement form.rnrnVariety Matters:rnDifferent berries contain slightly different nutrients, so mixing them in your diet gives you a wider range of health benefits. However, because berries contain natural sugar, they should be eaten in moderation.rnrnTop Berries:rnrn* Blueberries: High in phytonutrients, slightly sweeter than other      berries. Best eaten fresh or frozen, not processed.rnrn* Blackberries: Rich in antioxidants and fiber; closer to their wild             form than many cultivated berries.rnrn* Strawberries: Bright red and antioxidant-rich; organic is preferred due to pesticide concerns. Great in salads.rnrn* Raspberries: Low in sugar, surprisingly sweet, high in nutrients.rnrn* Cranberries: Lowest in sugar, good for urinary tract health; eat whole for maximum benefit.rnrn* Golden berries: Unique nutrient profile and vibrant color, great for variety and presentation.rnrn-> Which Berry is Most Nutritious?rnNo single berry is the “best.” Each has unique nutrients and benefits, so the healthiest approach is to eat a mix of berries. This way, you get the widest range of antioxidants and other plant compounds to support overall health.",
+      "image": "posts/1765528844_berri.jpg",
+      "category_id": 5,
+      "author_id": 8,
+      "status": "published",
+      "created_date": "2025-12-12 08:40:44",
+      "updated_date": "2025-12-12 08:40:44",
+      "published_date": null
+    },
+    {
+      "id": 35,
+      "title": "Covid-19 vaccination substantially lowered risks for children last season, CDC report says",
+      "content": "Children who were vaccinated against Covid-19 last season had a “substantially lower risk” of emergency department and urgent care visits related to the virus, according to a report published Thursday by the US Centers for Disease Control and Prevention.rnrnThe vaccines were about 76% effective in preventing these outcomes among healthy children ages 9 months to 4 years and about 56% effective among children ages 5 to 17 compared with those who did not receive an updated vaccine for the 2024-25 respiratory virus season, the report said.rnrnThe federal analysis was based on data from about 98,000 children who tested positive for Covid when they visited an emergency department or urgent care between late August 2024 and early September 2025. Visits were captured from 250 emergency departments and urgent cares across nine states that participate in a research collaboration that the CDC is involved in.rnrnOutcomes for children who received the updated vaccine for the 2024-25 respiratory virus season were compared with those who had not received the latest shot but may have had earlier series.",
+      "image": "posts/1765539084_get.jpg",
+      "category_id": 5,
+      "author_id": 8,
+      "status": "published",
+      "created_date": "2025-12-12 11:31:24",
+      "updated_date": "2025-12-12 11:31:24",
+      "published_date": null
+    },
+    {
+      "id": 36,
+      "title": "Visit Sri Lanka",
+      "content": "Sri Lanka isn’t just a place you visit — it’s a place that welcomes you. Golden beaches stretch like ribbons, misty mountains whisper old legends, and ancient cities rise proudly from the earth. Hop on the blue train through emerald tea hills, chase waterfalls in Ella, wander through Galle’s old-world charm, and let the aroma of spicy curries follow you everywhere.rnrnHere, elephants walk beside rivers, sunsets paint the sky in gold, and every smile feels like home.rnSri Lanka is more than a destination —rnit’s a feeling you’ll carry long after you leave.",
+      "image": "posts/1765564097_WhatsApp Image 2025-12-12 at 23.47.17.jpeg",
+      "category_id": 15,
+      "author_id": 9,
+      "status": "published",
+      "created_date": "2025-12-12 18:28:17",
+      "updated_date": "2025-12-12 18:28:17",
+      "published_date": null
+    },
+    {
+      "id": 37,
+      "title": "Healthy diet",
+      "content": "I<strong></strong>t protects you against many chronic noncommunicable diseases, such as heart disease, diabetes and cancer. Eating a variety of foods and consuming less salt, sugars and saturated and industrially-produced trans-fats, are essential for healthy diet.rnrnA healthy diet comprises a combination of different foods. These include:rnrn• Staples like cereals (wheat, barley, rye, maize or rice)  or starchy        tubers or roots (potato, yam, taro or cassava).rn• ILegumes (lentils and beans).rn• Fruit and vegetables.rnrn A healthy diet starts early in life rn breastfeeding fosters healthy growth, and may have longer-term health benefits, like reducing the risk of becoming overweight or obese and developing noncommunicable diseases later in life.rnFeeding babies exclusively with breast milk from birth to 6 months of life is important for a healthy diet. It is also important to introduce a variety of safe and nutritious complementary foods at 6 months of age, while continuing to breastfeed until your child is two years old and beyond.rn rnrnEat plenty of vegetables and fruit:rnThey are important sources of vitamins, minerals, dietary fibre, plant protein and antioxidants.rnPeople with diets rich in vegetables and fruit have a significantly lower risk of obesity, heart disease, stroke, diabetes and certain types of cancer.rn rnrnEat less fat:rnFats and oils and concentrated sources of energy. Eating too much, particularly the wrong kinds of fat, like saturated and industrially-produced trans-fat, can increase the risk of heart disease and stroke.rnUsing unsaturated vegetable oils (olive, soy, sunflower or corn oil) rather than animal fats or oils high in saturated fats (butter, ghee, lard, coconut and palm oil) will help consume healthier fats.rnTo avoid unhealthy weight gain, consumption of total fat should not exceed 30% of a person's overall energy intake.rn rnrnLimit intake of sugars:rnFor a healthy diet, sugars should represent less than 10% of your total energy intake. Reducing even further to under 5% has additional health benefits.rnChoosing fresh fruits instead of sweet snacks such as cookies, cakes and chocolate helps reduce consumption of sugars.rnLimiting intake of soft drinks, soda and other drinks high in sugars (fruit juices, cordials and syrups, flavoured milks and yogurt drinks) also helps reduce intake of sugars.rn rnrnReduce salt intake:rnKeeping your salt intake to less than 5g per day helps prevent hypertension and reduces the risk of heart disease and stroke in the adult population.rnLimiting the amount of salt and high-sodium condiments (soy sauce and fish sauce) when cooking and preparing foods helps reduce salt intake.",
+      "image": "posts/1765602601_WhatsApp Image 2025-12-12 at 23.48.08.jpeg",
+      "category_id": 5,
+      "author_id": 8,
+      "status": "published",
+      "created_date": "2025-12-13 05:10:01",
+      "updated_date": "2025-12-21 17:15:16",
+      "published_date": "2025-12-21 22:45:16"
+    },
+    {
+      "id": 38,
+      "title": "Victoria Dam (Sri Lanka)",
+      "content": "HistoryrnThe Victoria Dam was constructed under the Accelerated Mahaweli Development Programme (AMDP). The project had been in planning for 30 years but was accelerated in 1977 to address economic difficulties within the country. The plan is designed to irrigate 365,000 ha (901,935 acres) of land and provide 600 MW of electricity. The Victoria Dam was originally proposed in 1964 after studies were completed by Canada's Huntings Technical Services and a team from the United Nations Development Program—Food and Agriculture Organization (UNDP-FAO).[1] Construction of the dam was inaugurated on 14 August 1978, by the then-President Jayewardene with the implementation of the main structures beginning in 1980. Its completion was marked by a ceremony on 12 April 1985. Construction of the dam and tunnel was completed by the British Joint Venture of Balfour Beatty and Edmund Nuttall, while Costain Group carried out the construction of the power station.[2] The consultant engineers on the project was Sir Alexander Gibb & Partners.[3] The dam project resettled about 30,000 people — four times the estimate.[4]rnrnDam and powerhousernThe dam measures 122 m (400 ft) tall, with a crest length of 520 m (1,706 ft), crest width of 6 m (20 ft), and a base width of 25 m (82 ft). The dam creates the Victoria Reservoir, which has a surface area of 22.7 km2 (8.8 mi2), gross storage capacity of 722,000,000 m3 (2.55×1010 ft3), and a catchment area of 1,869 km2 (722 mi2).[2]rnrnWater from the dam is fed to the powerhouse at 07°12′00″N 80°48′21″E via a 5,646 m (18,524 ft) long tunnel, which houses three penstocks of 6.2 m (20.3 ft) diameter. These penstocks created a net head of 190 m (623 ft), feeding three 70 MW 12.5 kV turbines, which are capable of generating up to 780 GWh of electrical energy annually.rnrnThe dam consists of eight spillways, each with a width and height of 12.5 m (41 ft) and 6.5 m (21.3 ft), which automatically opens when water levels are high. The dam's gates, which need power only to close, won an award for \"Innovative Design in Civil Engineering\" by the Institution of Civil Engineers. The total effective width of the spillways is 100 m (328 ft), allowing a maximum discharge of 8,200 m3/s (289,580 cu ft/s). Two additional low-level sluices at the base of the dam allows the purging of accumulated silts behind the dam.",
+      "image": "posts/1766549206_wicktoria.jpg",
+      "category_id": 15,
+      "author_id": 2,
+      "status": "published",
+      "created_date": "2025-12-24 04:06:46",
+      "updated_date": "2025-12-24 04:06:46",
+      "published_date": null
+    },
+    {
+      "id": 39,
+      "title": "Vegetables and Fruits",
+      "content": "1.Vegetables and fruits are an important part of a healthy diet, and variety is as important as quantity.rnrnrn2.No single fruit or vegetable provides all of the nutrients you need to be healthy. Eat plenty every day.rnrnrnA diet rich in vegetables and fruits can lower blood pressure, reduce the risk of heart disease and stroke, prevent some types of cancer, lower risk of eye and digestive problems, and have a positive effect upon blood sugar, which can help keep appetite in check. Eating non-starchy vegetables and fruits like apples, pears, and green leafy vegetables may even promote weight loss. [1] Their low glycemic loads prevent blood sugar spikes that can increase hunger.rnrnAt least nine different families of fruits and vegetables exist, each with potentially hundreds of different plant compounds that are beneficial to health. Eat a variety of types and colors of produce in order to give your body the mix of nutrients it needs. This not only ensures a greater diversity of beneficial plant chemicals but also creates eye-appealing meals.Blood rnrn* pressurernrnThe Dietary Approaches to Stop Hypertension (DASH) study [6] examined the effect on blood pressure of a diet that was rich in fruits, vegetables, and low-fat dairy products and that restricted the amount of saturated and total fat. The researchers found that people with high blood pressure who followed this diet reduced their systolic blood pressure (the upper number of a blood pressure reading) by about 11 mm Hg and their diastolic blood pressure (the lower number) by almost 6 mm Hg—as much as medications can achieve.rnA randomized trial known as the Optimal Macronutrient Intake Trial for Heart Health (OmniHeart) showed that this fruit and vegetable-rich diet lowered blood pressure even more when some of the carbohydrate was replaced with healthy unsaturated fat or protein. [7]rnIn 2014 a meta-analysis of clinical trials and observational studies found that consumption of a vegetarian diet was associated with lower blood pressure. rnrn* CancerrnrnNumerous early studies revealed what appeared to be a strong link between eating fruits and vegetables and protection against cancer. Unlike case-control studies, cohort studies, which follow large groups of initially healthy individuals for years, generally provide more reliable information than case-control studies because they don’t rely on information from the past. And, in general, data from cohort studies have not consistently shown that a diet rich in fruits and vegetables prevents cancer.For example, over a 14-year period in the Nurses’ Health Study and the Health Professionals Follow-up Study, men and women with the highest intake of fruits and vegetables (8+ servings a day) were just as likely to have developed cancer as those who ate the fewest daily servings (under 1.5). [3]A meta-analysis of cohort studies found that a higher fruit and vegetable intake did not decrease the risk of deaths from cancer. [2]rnA more likely possibility is that some types of fruits and vegetables may protect against certain cancers.rnrnA study by Farvid and colleagues followed a Nurses’ Health Study II cohort of 90,476 premenopausal women for 22 years and found that those who ate the most fruit during adolescence (about 3 servings a day) compared with those who ate the lowest intakes (0.5 servings a day) had a 25% lower risk of developing breast cancer. There was a significant reduction in breast cancer in women who had eaten higher intakes of apples, bananas, grapes, and corn during adolescence, and oranges and kale during early adulthood. No protection was found from drinking fruit juices at younger ages. [9]rnFarvid and colleagues followed 90, 534 premenopausal women from the Nurses’ Health Study II over 20 years and found that higher fiber intakes during adolescence and early adulthood were associated with a reduced risk of breast cancer later in life. When comparing the highest and lowest fiber intakes from fruits and vegetables, women with the highest fruit fiber intake had a 12% reduced risk of breast cancer; those with the highest vegetable fiber intake had an 11% reduced risk. [10]rnAfter following 182,145 women in the Nurses’ Health Study I and II for 30 years, Farvid’s team also found that women who ate more than 5.5 servings of fruits and vegetables each day (especially cruciferous and yellow/orange vegetables) had an 11% lower risk of breast cancer than those who ate 2.5 or fewer servings. Vegetable intake was strongly associated with a 15% lower risk of estrogen-receptor-negative tumors for every two additional servings of vegetables eaten daily. A higher intake of fruits and vegetables was associated with a lower risk of other aggressive tumors including HER2-enriched and basal-like tumors. [11]rnA report by the World Cancer Research Fund and the American Institute for Cancer Research suggests that non-starchy vegetables—such as lettuce and other leafy greens, broccoli, bok choy, cabbage, as well as garlic, onions, and the like—and fruits “probably” protect against several types of cancers, including those of the mouth, throat, voice box, esophagus, and stomach. Fruit probably also protects against lung cancer. [12]rnSpecific components of fruits and vegetables may also be protective against cancer. For example:rnrnA line of research stemming from a finding from the Health Professionals Follow-up Study suggests that tomatoes may help protect men against prostate cancer, especially aggressive forms of it. [12] One of the pigments that give tomatoes their red hue—lycopene—could be involved in this protective effect. Although several studies other than the Health Professionals Study have also demonstrated a link between tomatoes or lycopene and prostate cancer, others have not or have found only a weak connection. [14]rnTaken as a whole, however, these studies suggest that increased consumption of tomato-based products (especially cooked tomato products) and other lycopene-containing foods may reduce the occurrence of prostate cancer. [12] Lycopene is one of several carotenoids (compounds that the body can turn into vitamin A) found in brightly colored fruits and vegetables, and research suggests that foods containing carotenoids may protect against lung, mouth, and throat cancer. [12] But more research is needed to understand the exact relationship between fruits and vegetables, carotenoids, and cancer.rnDiabetesrnSome research looks specifically at whether individual fruits are associated with risk of type 2 diabetes. While there isn’t an abundance of research into this area yet, preliminary results are compelling.rnrnA study of over 66,000 women in the Nurses’ Health Study, 85,104 women from the Nurses’ Health Study II, and 36,173 men from the Health Professionals Follow-up Study—who were free of major chronic diseases—found that greater consumption of whole fruits—especially blueberries, grapes, and apples—was associated with a lower risk of type 2 diabetes. Another important finding was that greater consumption of fruit juice was associated with a higher risk of type 2 diabetes. [15]rnAdditionally a study of over 70,000 female nurses aged 38-63 years, who were free of cardiovascular disease, cancer, and diabetes, showed that consumption of green leafy vegetables and fruit was associated with a lower risk of diabetes. While not conclusive, research also indicated that consumption of fruit juices may be associated with an increased risk among women. (16)rnA study of over 2,300 Finnish men showed that vegetables and fruits, especially berries, may reduce the risk of type 2 diabetes. [17]rnrn1.WeightrnrnData from the Nurses’ Health Studies and the Health Professional’s Follow-up Study show that women and men who increased their intakes of fruits and vegetables over a 24-year period were more likely to have lost weight than those who ate the same amount or those who decreased their intake. Berries, apples, pears, soy, and cauliflower were associated with weight loss while starchier vegetables like potatoes, corn, and peas were linked with weight gain. [1] However, keep in mind that adding more produce into the diet won’t necessarily help with weight loss unless it replaces another food, such as refined carbohydrates of white bread and crackers.rnrn2.Gastrointestinal healthrnrnFruits and vegetables contain indigestible fiber, which absorbs water and expands as it passes through the digestive system. This can calm symptoms of an irritable bowel and, by triggering regular bowel movements, can relieve or prevent constipation. [18] The bulking and softening action of insoluble fiber also decreases pressure inside the intestinal tract and may help prevent diverticulosis. [19]rnrn3.VisionrnrnEating fruits and vegetables can also keep your eyes healthy, and may help prevent two common aging-related eye diseases—cataracts and macular degeneration—which afflict millions of Americans over age 65. [20-23] Lutein and zeaxanthin, in particular, seem to reduce risk of cataracts. [24]",
+      "image": "posts/1766684963_healthy-food-healthy-eating-background-fruit-vegetable-berry-vegetarian-eating-superfood.webp",
+      "category_id": 5,
+      "author_id": 8,
+      "status": "published",
+      "created_date": "2025-12-25 17:49:23",
+      "updated_date": "2025-12-25 17:49:23",
+      "published_date": null
+    },
+    {
+      "id": 40,
+      "title": "Web Development Best Practices",
+      "content": "Apple Inc. is an American multinational technology company headquartered in Cupertino, California, known for its innovation in consumer electronics, software, and online services.rn The company was founded in 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne, initially to market Wozniak's Apple I personal computer, which was developed in Jobs' family garage.rn The Apple II, released in 1977, became one of the first commercially successful mass-produced microcomputers, featuring color graphics, sound, and a user-friendly design.rnrnApple revolutionized personal computing with the introduction of the Macintosh in 1984, one of the first personal computers to feature a graphical user interface (GUI) and a mouse, inspired by innovations observed at Xerox PARC.rn The company has consistently emphasized design, user experience, and seamless integration between hardware and software, setting industry standards.rn Apple's product lineup includes the iPhone, iPad, Mac computers, Apple Watch, Apple TV, AirPods, and the Apple Vision Pro headset, which runs on visionOS and supports spatial computing through eye, hand, and voice control.rnrnSince 2020, Apple has transitioned its Mac computers to its own in-house designed M-series chips based on ARM architecture, which are praised for their performance and power efficiency.rn The company has also expanded into services, offering iCloud, Apple Pay, Apple Music, Apple TV+, and the App Store, creating a tightly integrated ecosystem across its devices.rn Apple Intelligence, a generative AI platform, integrates advanced capabilities such as ChatGPT through Siri, enabling users to manage schedules, enhance writing, summarize text, and create custom content, with support beginning in iOS 18 and on compatible devices.rnrnApple has been the world’s largest company by market capitalization since 2011 and, as of October 2025, is valued at just over $4 trillion, making it the largest manufacturing company by revenue and the leading vendor in tablet and mobile phone markets.rn The company continues to innovate, with recent developments including new developer tools like Xcode Cloud and advancements in Swift concurrency and augmented reality (AR) technologies to enhance app development.",
+      "image": "posts/1766754367_download (3).jpg",
+      "category_id": 1,
+      "author_id": 8,
+      "status": "published",
+      "created_date": "2025-12-26 13:06:07",
+      "updated_date": "2025-12-26 13:06:07",
+      "published_date": null
+    }
+  ]
+}
