@@ -14,5 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias(['role' => \App\Http\Middleware\RequireRole::class]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
-        //
+        $exceptions->report(function (\Throwable $exception): void {
+            error_log('NewsHub request failure: '.$exception);
+        });
     })->create();
