@@ -17,9 +17,4 @@ return Application::configure(basePath: dirname(__DIR__))
         $exceptions->report(function (\Throwable $exception): void {
             error_log('NewsHub request failure: '.$exception);
         });
-        $exceptions->render(function (\Throwable $exception) {
-            if (env('VERCEL')) {
-                return response('NewsHub error: '.$exception->getMessage(), 500);
-            }
-        });
     })->create();

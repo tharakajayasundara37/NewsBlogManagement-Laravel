@@ -5,12 +5,17 @@ $storage = '/tmp/news-hub-storage';
 foreach (['framework/cache', 'framework/sessions', 'framework/views', 'logs'] as $directory) { if (! is_dir($storage.'/'.$directory)) mkdir($storage.'/'.$directory, 0777, true); }
 
 $runtimePaths = [
+    'APP_MAINTENANCE_DRIVER' => 'file',
     'APP_CONFIG_CACHE' => '/tmp/news-hub-config.php',
     'APP_EVENTS_CACHE' => '/tmp/news-hub-events.php',
     'APP_PACKAGES_CACHE' => '/tmp/news-hub-packages.php',
     'APP_ROUTES_CACHE' => '/tmp/news-hub-routes.php',
     'APP_SERVICES_CACHE' => '/tmp/news-hub-services.php',
     'VIEW_COMPILED_PATH' => $storage.'/framework/views',
+    'BROADCAST_CONNECTION' => 'log',
+    'FILESYSTEM_DISK' => 'local',
+    'QUEUE_CONNECTION' => 'sync',
+    'MAIL_MAILER' => 'log',
 ];
 
 foreach ($runtimePaths as $name => $value) {
