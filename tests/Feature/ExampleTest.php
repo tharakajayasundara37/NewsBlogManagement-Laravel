@@ -12,10 +12,10 @@ class ExampleTest extends TestCase
      */
     public function test_public_pages_render_and_dashboard_is_protected(): void
     {
-        $this->get('/')->assertOk()->assertSee('Stories that shape')->assertSee('Visit Sri Lanka');
+        $this->get('/')->assertOk()->assertSee('Welcome to News Blog')->assertSee('Visit Sri Lanka');
         $this->get('/posts/36')->assertOk()->assertSee('Visit Sri Lanka');
-        $this->get('/about')->assertOk()->assertSee('News with context');
-        $this->get('/contact')->assertOk()->assertSee('Tell us');
+        $this->get('/about')->assertOk()->assertSee('About News Blog');
+        $this->get('/contact')->assertOk()->assertSee('Send us a Message');
         $this->get('/login')->assertOk()->assertSee('Welcome back');
         $this->get('/dashboard')->assertRedirect('/login');
     }
