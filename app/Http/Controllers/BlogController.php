@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\{Category, Comment, ContactMessage, Post, Subscriber};
 use App\Support\LegacyContent;
+use App\Support\DatabaseBootstrap;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -11,10 +12,21 @@ class BlogController extends Controller
     public function index(Request $request)
     {
         if (! $this->databaseConfigured()) return view('blog.index', ['posts' => LegacyContent::posts($request->q, $request->category), 'categories' => LegacyContent::categories(), 'demoMode' => true]);
+        DatabaseBootstrap::run();
         $query = Post::with(['category', 'author'])->where('status', 'published');
         if ($request->filled('q')) $query->where(fn ($q) => $q->where('title', 'like', '%'.$request->q.'%')->orWhere('content', 'like', '%'.$request->q.'%'));
         if ($request->filled('category')) $query->where('category_id', $request->category);
         return view('blog.index', ['posts' => $query->latest('published_at')->paginate(9)->withQueryString(), 'categories' => Category::where('status', 'active')->orderBy('category_name')->get()]);
+    }
+
+    public function archive(Request $request)
+    {
+        if (! $this->databaseConfigured()) return view('blog.archive', ['posts' => LegacyContent::posts($request->q, $request->category, 12), 'categories' => LegacyContent::categories()]);
+        DatabaseBootstrap::run();
+        $query = Post::with(['category', 'author'])->where('status', 'published');
+        if ($request->filled('q')) $query->where(fn ($q) => $q->where('title', 'like', '%'.$request->q.'%')->orWhere('content', 'like', '%'.$request->q.'%'));
+        if ($request->filled('category')) $query->where('category_id', $request->category);
+        return view('blog.archive', ['posts' => $query->latest('published_at')->paginate(12)->withQueryString(), 'categories' => Category::where('status', 'active')->orderBy('category_name')->get()]);
     }
 
     public function show(string $post)

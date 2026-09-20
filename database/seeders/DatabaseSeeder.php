@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
 
         $data = json_decode(file_get_contents(database_path('seed-data/legacy-content.json')), true, flags: JSON_THROW_ON_ERROR);
 
-        $admin = User::updateOrCreate(['email' => env('ADMIN_EMAIL', 'admin@newshub.local')], [
-            'name' => 'NewsHub Administrator', 'password' => env('ADMIN_PASSWORD', 'change-this-password'), 'role' => 'admin',
+        $admin = User::updateOrCreate(['email' => env('ADMIN_EMAIL') ?: 'admin@newsblog.com'], [
+            'name' => 'News Blog Administrator', 'password' => env('ADMIN_PASSWORD') ?: 'password', 'role' => 'admin',
         ]);
 
         $categoryIds = [];

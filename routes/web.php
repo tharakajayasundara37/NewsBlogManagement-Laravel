@@ -4,6 +4,8 @@ use App\Http\Controllers\{AdminController, AuthController, BlogController, Dashb
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [BlogController::class, 'index'])->name('home');
+Route::get('/postsme', [BlogController::class, 'archive'])->name('posts.index');
+Route::get('/posts', [BlogController::class, 'archive']);
 Route::get('/posts/{post}', [BlogController::class, 'show'])->name('posts.show');
 Route::post('/posts/{post}/comments', [BlogController::class, 'comment'])->name('comments.store');
 Route::view('/about', 'blog.about')->name('about');
