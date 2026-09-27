@@ -21,7 +21,11 @@ class DatabaseBootstrap
 
     public static function configured(): bool
     {
-        $uri = (string) env('DB_URI', '');
-        return $uri !== '' && ! str_contains($uri, '127.0.0.1') && ! str_contains($uri, 'localhost');
+        $uri = (string) config('database.connections.mongodb.dsn', '');
+
+        return config('database.default') === 'mongodb'
+            && $uri !== ''
+            && ! str_contains($uri, '127.0.0.1')
+            && ! str_contains($uri, 'localhost');
     }
 }

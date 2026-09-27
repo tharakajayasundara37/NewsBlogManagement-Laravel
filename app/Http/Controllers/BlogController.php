@@ -64,7 +64,6 @@ class BlogController extends Controller
 
     private function databaseConfigured(): bool
     {
-        $uri = (string) env('DB_URI', '');
-        return $uri !== '' && ! str_contains($uri, '127.0.0.1') && ! str_contains($uri, 'localhost');
+        return DatabaseBootstrap::configured();
     }
 }
