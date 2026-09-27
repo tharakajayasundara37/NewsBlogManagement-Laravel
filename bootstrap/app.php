@@ -15,6 +15,12 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->report(function (\Throwable $exception): void {
-            error_log('NewsHub request failure: '.$exception);
+            error_log(sprintf(
+                'NewsHub request failure [%s]: %s in %s:%d',
+                $exception::class,
+                $exception->getMessage(),
+                $exception->getFile(),
+                $exception->getLine(),
+            ));
         });
     })->create();

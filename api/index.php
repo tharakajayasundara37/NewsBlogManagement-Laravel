@@ -30,7 +30,13 @@ try {
     $app->useStoragePath($storage);
     $app->handleRequest(Request::capture());
 } catch (Throwable $exception) {
-    error_log('NewsHub bootstrap failure: '.$exception);
+    error_log(sprintf(
+        'NewsHub bootstrap failure [%s]: %s in %s:%d',
+        $exception::class,
+        $exception->getMessage(),
+        $exception->getFile(),
+        $exception->getLine(),
+    ));
     http_response_code(500);
     echo 'NewsHub is temporarily unavailable.';
 }
