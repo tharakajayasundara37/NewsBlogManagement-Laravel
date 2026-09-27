@@ -16,6 +16,9 @@ $runtimePaths = [
     'FILESYSTEM_DISK' => 'local',
     'QUEUE_CONNECTION' => 'sync',
     'MAIL_MAILER' => 'log',
+    'SESSION_DRIVER' => 'mongodb',
+    'SESSION_CONNECTION' => 'mongodb',
+    'SESSION_LIFETIME' => '120',
 ];
 
 foreach ($runtimePaths as $name => $value) {
