@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\{Category, Post, User};
+use App\Support\PasswordHash;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,7 +21,7 @@ class DatabaseSeeder extends Seeder
         $data = json_decode(file_get_contents(database_path('seed-data/legacy-content.json')), true, flags: JSON_THROW_ON_ERROR);
 
         $admin = User::updateOrCreate(['email' => env('ADMIN_EMAIL') ?: 'admin@newsblog.com'], [
-            'name' => 'News Blog Administrator', 'password' => env('ADMIN_PASSWORD') ?: 'password', 'role' => 'admin',
+            'name' => 'News Blog Administrator', 'password' => PasswordHash::make(env('ADMIN_PASSWORD') ?: 'password'), 'role' => 'admin',
         ]);
 
         $categoryIds = [];
