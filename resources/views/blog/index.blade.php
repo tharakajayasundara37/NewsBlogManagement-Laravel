@@ -20,11 +20,11 @@
             <div class="featured-grid">
                 @foreach($featured as $post)
                     <article class="featured-card">
-                        <div class="featured-image"><img src="{{ asset('images/'.$post->image) }}" alt="{{ $post->title }}"><span class="category-tag">{{ $post->category?->category_name }}</span></div>
+                        <div class="featured-image"><img src="{{ App\Support\PostImage::url($post->image) }}" alt="{{ $post->title }}"><span class="category-tag">{{ $post->category?->category_name }}</span></div>
                         <div class="featured-content">
                             <div class="post-meta"><span><i class="fas fa-user"></i> {{ $post->author?->name ?? 'News Blog' }}</span><span><i class="far fa-calendar"></i> {{ $post->published_at?->diffForHumans() }}</span></div>
                             <h3 class="post-title"><a href="{{ route('posts.show', $post->_id) }}">{{ $post->title }}</a></h3>
-                            <p class="post-excerpt">{{ Str::limit(strip_tags($post->content), 145) }}</p>
+                            <p class="post-excerpt">{{ Str::limit(App\Support\ArticleText::clean($post->content), 145) }}</p>
                             <a class="read-more" href="{{ route('posts.show', $post->_id) }}">Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
@@ -38,11 +38,11 @@
                 <div class="posts-grid">
                     @foreach($regular as $post)
                         <article class="post-card">
-                            <div class="post-image"><img src="{{ asset('images/'.$post->image) }}" alt="{{ $post->title }}"><span class="category-tag">{{ $post->category?->category_name }}</span></div>
+                            <div class="post-image"><img src="{{ App\Support\PostImage::url($post->image) }}" alt="{{ $post->title }}"><span class="category-tag">{{ $post->category?->category_name }}</span></div>
                             <div class="post-content">
                                 <div class="post-meta"><span><i class="fas fa-user"></i> {{ $post->author?->name ?? 'News Blog' }}</span><span><i class="far fa-calendar"></i> {{ $post->published_at?->diffForHumans() }}</span></div>
                                 <h3 class="post-title"><a href="{{ route('posts.show', $post->_id) }}">{{ $post->title }}</a></h3>
-                                <p class="post-excerpt">{{ Str::limit(strip_tags($post->content), 100) }}</p>
+                                <p class="post-excerpt">{{ Str::limit(App\Support\ArticleText::clean($post->content), 100) }}</p>
                                 <div class="post-footer"><a class="read-more-btn" href="{{ route('posts.show', $post->_id) }}">Read More <i class="fas fa-arrow-right"></i></a><span class="post-stats"><i class="far fa-eye"></i> {{ $post->views ?? 0 }}</span></div>
                             </div>
                         </article>
@@ -53,7 +53,7 @@
             <aside class="sidebar">
                 <section class="sidebar-widget">
                     <h3 class="widget-title"><i class="fas fa-fire"></i> Popular News</h3>
-                    @foreach($posts->take(5) as $post)
+                    @foreach($popular as $post)
                         <div class="popular-post"><span class="rank">{{ $loop->iteration }}</span><div class="popular-content"><h4><a href="{{ route('posts.show', $post->_id) }}">{{ $post->title }}</a></h4><div class="popular-meta"><span>{{ $post->category?->category_name }}</span><span>{{ $post->published_at?->diffForHumans() }}</span></div></div></div>
                     @endforeach
                 </section>

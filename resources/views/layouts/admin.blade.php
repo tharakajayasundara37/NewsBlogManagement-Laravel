@@ -27,5 +27,6 @@
     @if($errors->any())<div class="admin-alert error"><i class="fas fa-circle-exclamation"></i> {{ $errors->first() }}</div>@endif
     <main class="admin-content">@yield('content')</main>
 </div>
+@stack('scripts')
 </body>
 </html>

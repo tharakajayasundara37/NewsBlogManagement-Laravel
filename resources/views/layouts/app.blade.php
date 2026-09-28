@@ -78,5 +78,6 @@
     <div class="footer-bottom"><span>© {{ date('Y') }} News Blog. All rights reserved.</span><span>Independent stories. Clear perspectives.</span></div>
 </footer>
 <button class="back-top" type="button" aria-label="Back to top" onclick="scrollTo({top:0, behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+@stack('scripts')
 </body>
 </html>

@@ -18,14 +18,19 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->n
 
 Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::post('/posts/bulk', [PostController::class, 'bulk'])->name('dashboard.posts.bulk');
     Route::resource('/posts', PostController::class)->except('show')->names('dashboard.posts');
     Route::middleware('role:admin')->group(function () {
         Route::get('/categories', [AdminController::class, 'categories'])->name('dashboard.categories');
         Route::post('/categories', [AdminController::class, 'storeCategory'])->name('dashboard.categories.store');
+        Route::put('/categories/{category}', [AdminController::class, 'updateCategory'])->name('dashboard.categories.update');
         Route::delete('/categories/{category}', [AdminController::class, 'deleteCategory'])->name('dashboard.categories.destroy');
         Route::get('/comments', [AdminController::class, 'comments'])->name('dashboard.comments');
         Route::patch('/comments/{comment}', [AdminController::class, 'commentStatus'])->name('dashboard.comments.update');
+        Route::delete('/comments/{comment}', [AdminController::class, 'deleteComment'])->name('dashboard.comments.destroy');
         Route::get('/users', [AdminController::class, 'users'])->name('dashboard.users');
         Route::post('/users', [AdminController::class, 'storeUser'])->name('dashboard.users.store');
+        Route::patch('/users/{user}', [AdminController::class, 'updateUser'])->name('dashboard.users.update');
+        Route::delete('/users/{user}', [AdminController::class, 'deleteUser'])->name('dashboard.users.destroy');
     });
 });
