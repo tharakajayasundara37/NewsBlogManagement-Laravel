@@ -1,1 +1,79 @@
-@extends('layouts.app') @section('title','News Blog - Latest News & Updates') @section('content')<link rel="stylesheet" href="{{asset('css/homepage.css')}}">@php($featured=$posts->take(2)) @php($regular=$posts->skip(2))<header class="hero-section"><div class="container"><h1 class="hero-title">Welcome to News Blog</h1><p class="hero-subtitle">Your trusted source for news, in-depth analysis, and trending stories from around the world. Stay informed with our news coverage and exclusive features.</p><a href="#latest-news" class="btn"><i class="fas fa-newspaper"></i> Explore Latest News</a></div></header><main class="main-content"><div class="container"><section class="featured-section"><h2 class="section-title"><i class="fas fa-star"></i> Featured Stories</h2><div class="featured-grid">@foreach($featured as $post)<article class="featured-card"><div class="featured-image"><img src="{{asset('images/'.$post->image)}}" alt="{{$post->title}}"><span class="category-tag">{{$post->category?->category_name}}</span></div><div class="featured-content"><div class="post-meta"><span><i class="fas fa-user"></i> {{$post->author?->name ?? 'News Blog'}}</span><span><i class="far fa-calendar"></i> {{$post->published_at?->diffForHumans()}}</span></div><h3 class="post-title"><a href="{{route('posts.show',$post->_id)}}">{{$post->title}}</a></h3><p class="post-excerpt">{{Str::limit(strip_tags($post->content),145)}}</p><a class="read-more" href="{{route('posts.show',$post->_id)}}">Read More <i class="fas fa-arrow-right"></i></a></div></article>@endforeach</div></section><div class="content-wrapper" id="latest-news"><section class="latest-posts"><h2 class="section-title"><i class="fas fa-clock"></i> Latest News</h2><div class="posts-grid">@foreach($regular as $post)<article class="post-card"><div class="post-image"><img src="{{asset('images/'.$post->image)}}" alt="{{$post->title}}"><span class="category-tag">{{$post->category?->category_name}}</span></div><div class="post-content"><div class="post-meta"><span><i class="fas fa-user"></i> {{$post->author?->name ?? 'News Blog'}}</span><span><i class="far fa-calendar"></i> {{$post->published_at?->diffForHumans()}}</span></div><h3 class="post-title"><a href="{{route('posts.show',$post->_id)}}">{{$post->title}}</a></h3><p class="post-excerpt">{{Str::limit(strip_tags($post->content),100)}}</p><div class="post-footer"><a class="read-more-btn" href="{{route('posts.show',$post->_id)}}">Read More</a><span class="post-stats"><i class="far fa-eye"></i> {{$post->views ?? 0}}</span></div></div></article>@endforeach</div></section><aside class="sidebar"><section class="sidebar-widget"><h3 class="widget-title"><i class="fas fa-fire"></i> Popular News</h3>@foreach($posts->take(5) as $post)<div class="popular-post"><span class="rank">{{$loop->iteration}}</span><div class="popular-content"><h4><a href="{{route('posts.show',$post->_id)}}">{{$post->title}}</a></h4><div class="popular-meta"><span>{{$post->category?->category_name}}</span><span>{{$post->published_at?->diffForHumans()}}</span></div></div></div>@endforeach</section><section class="sidebar-widget"><h3 class="widget-title"><i class="fas fa-folder-open"></i> Categories</h3>@foreach($categories as $category)<a class="category-item" href="{{route('home',['category'=>$category->_id])}}"><span>{{$category->category_name}}</span><span class="category-count">›</span></a>@endforeach</section><section class="sidebar-widget newsletter-widget"><h3 class="widget-title"><i class="fas fa-envelope"></i> Newsletter</h3><p>Subscribe to our newsletter for daily updates</p><form class="newsletter-form" method="post" action="{{route('subscribe')}}">@csrf<input type="email" name="email" placeholder="Your email address" required><button><i class="fas fa-paper-plane"></i> Subscribe</button></form></section><section class="sidebar-widget"><h3 class="widget-title"><i class="fas fa-tags"></i> Trending Tags</h3><div class="tags-cloud">@foreach(['Breaking News','Technology','Politics','Sports','Entertainment','Health','Business','World News'] as $tag)<a href="#" class="tag">{{$tag}}</a>@endforeach</div></section></aside></div><div class="ad-banner"><h3>Advertisement</h3><p>Your ad could be here</p><a href="{{route('contact')}}" class="btn">Contact Us</a></div></div></main>@endsection
+@extends('layouts.app')
+@section('title', 'News Blog - Latest News & Updates')
+@push('styles')<link rel="stylesheet" href="{{ asset('css/homepage.css') }}">@endpush
+@section('content')
+@php($featured = $posts->take(2))
+@php($regular = $posts->skip(2))
+
+<header class="hero-section">
+    <div class="container">
+        <h1 class="hero-title">Welcome to News Blog</h1>
+        <p class="hero-subtitle">Your trusted source for news, in-depth analysis, and trending stories from around the world. Stay informed with our news coverage and exclusive features.</p>
+        <a href="#latest-news" class="btn"><i class="fas fa-newspaper"></i> Explore Latest News</a>
+    </div>
+</header>
+
+<main class="main-content">
+    <div class="container">
+        <section class="featured-section">
+            <h2 class="section-title"><i class="fas fa-star"></i> Featured Stories</h2>
+            <div class="featured-grid">
+                @foreach($featured as $post)
+                    <article class="featured-card">
+                        <div class="featured-image"><img src="{{ asset('images/'.$post->image) }}" alt="{{ $post->title }}"><span class="category-tag">{{ $post->category?->category_name }}</span></div>
+                        <div class="featured-content">
+                            <div class="post-meta"><span><i class="fas fa-user"></i> {{ $post->author?->name ?? 'News Blog' }}</span><span><i class="far fa-calendar"></i> {{ $post->published_at?->diffForHumans() }}</span></div>
+                            <h3 class="post-title"><a href="{{ route('posts.show', $post->_id) }}">{{ $post->title }}</a></h3>
+                            <p class="post-excerpt">{{ Str::limit(strip_tags($post->content), 145) }}</p>
+                            <a class="read-more" href="{{ route('posts.show', $post->_id) }}">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+        </section>
+
+        <div class="content-wrapper" id="latest-news">
+            <section class="latest-posts">
+                <h2 class="section-title"><i class="fas fa-clock"></i> Latest News</h2>
+                <div class="posts-grid">
+                    @foreach($regular as $post)
+                        <article class="post-card">
+                            <div class="post-image"><img src="{{ asset('images/'.$post->image) }}" alt="{{ $post->title }}"><span class="category-tag">{{ $post->category?->category_name }}</span></div>
+                            <div class="post-content">
+                                <div class="post-meta"><span><i class="fas fa-user"></i> {{ $post->author?->name ?? 'News Blog' }}</span><span><i class="far fa-calendar"></i> {{ $post->published_at?->diffForHumans() }}</span></div>
+                                <h3 class="post-title"><a href="{{ route('posts.show', $post->_id) }}">{{ $post->title }}</a></h3>
+                                <p class="post-excerpt">{{ Str::limit(strip_tags($post->content), 100) }}</p>
+                                <div class="post-footer"><a class="read-more-btn" href="{{ route('posts.show', $post->_id) }}">Read More <i class="fas fa-arrow-right"></i></a><span class="post-stats"><i class="far fa-eye"></i> {{ $post->views ?? 0 }}</span></div>
+                            </div>
+                        </article>
+                    @endforeach
+                </div>
+            </section>
+
+            <aside class="sidebar">
+                <section class="sidebar-widget">
+                    <h3 class="widget-title"><i class="fas fa-fire"></i> Popular News</h3>
+                    @foreach($posts->take(5) as $post)
+                        <div class="popular-post"><span class="rank">{{ $loop->iteration }}</span><div class="popular-content"><h4><a href="{{ route('posts.show', $post->_id) }}">{{ $post->title }}</a></h4><div class="popular-meta"><span>{{ $post->category?->category_name }}</span><span>{{ $post->published_at?->diffForHumans() }}</span></div></div></div>
+                    @endforeach
+                </section>
+                <section class="sidebar-widget">
+                    <h3 class="widget-title"><i class="fas fa-folder-open"></i> Categories</h3>
+                    @foreach($categories as $category)<a class="category-item" href="{{ route('home', ['category' => $category->_id]) }}"><span>{{ $category->category_name }}</span><span class="category-count">›</span></a>@endforeach
+                </section>
+                <section class="sidebar-widget newsletter-widget">
+                    <h3 class="widget-title"><i class="fas fa-envelope"></i> Newsletter</h3>
+                    <p>Subscribe to our newsletter for daily updates.</p>
+                    <form class="newsletter-form" method="post" action="{{ route('subscribe') }}">@csrf<input type="email" name="email" placeholder="Your email address" required><button><i class="fas fa-paper-plane"></i> Subscribe</button></form>
+                </section>
+                <section class="sidebar-widget">
+                    <h3 class="widget-title"><i class="fas fa-tags"></i> Trending Tags</h3>
+                    <div class="tags-cloud">@foreach(['Breaking News', 'Technology', 'Politics', 'Sports', 'Entertainment', 'Health', 'Business', 'World News'] as $tag)<a href="{{ route('home', ['q' => $tag]) }}" class="tag">{{ $tag }}</a>@endforeach</div>
+                </section>
+            </aside>
+        </div>
+
+        <div class="ad-banner"><h3>Grow with News Blog</h3><p>Reach an engaged audience through our newsroom.</p><a href="{{ route('contact') }}" class="btn">Contact Us</a></div>
+    </div>
+</main>
+@endsection
