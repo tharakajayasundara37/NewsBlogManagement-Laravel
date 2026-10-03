@@ -238,3 +238,42 @@
 .travel-home .category-tag { border-color: #ffffff80; background: #fffffff0; color: #404a00; }
 .travel-home .hero-section .btn { border-color: #fff; background: #fff; color: #17212b; }
 .travel-home .hero-section .btn:hover { background: #eef3f6; color: #17212b; }
+
+/* Floating glass navbar, matching the original glass card reference. */
+.travel-home .modern-nav {
+    top: 24px;
+    width: min(1300px, calc(100% - 112px));
+    border: 1px solid #bbe8f8;
+    border-radius: 32px;
+    background: radial-gradient(ellipse at 100% 100%, #bfeeff88, transparent 57%), linear-gradient(120deg, #ffffffdc, #f2fbffc2);
+    box-shadow: 0 22px 55px #32637626, inset 0 1px 0 #ffffff;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+.travel-home .nav-container { padding: 0 32px; }
+.travel-home .nav-search input { border-radius: 999px; background: #ffffff80; border-color: #c9e1eb; }
+.travel-home .login-btn { border-radius: 999px; background: #ffffffa8; border-color: #c9e1eb; color: #17212b; }
+.travel-home .login-btn:hover { background: #dff5fc; color: #17212b; }
+.travel-home .modern-nav .dropdown-menu {
+    border: 1px solid #bbe8f8;
+    border-radius: 22px;
+    background: linear-gradient(120deg, #ffffffed, #eaf8ffe0);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+@media (max-width: 1100px) {
+    .travel-home .modern-nav { top: 18px; width: calc(100% - 64px); border-radius: 28px; }
+    .travel-home .mobile-toggle { border-radius: 50%; background: #ffffff80; border-color: #c9e1eb; }
+    .travel-home .modern-nav .nav-menu {
+        inset: calc(100% + 12px) 0 auto;
+        border: 1px solid #bbe8f8;
+        border-radius: 28px;
+        background: linear-gradient(120deg, #ffffffed, #eaf8ffe0);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+    }
+}
+@media (max-width: 700px) {
+    .travel-home .modern-nav { top: 16px; width: calc(100% - 48px); border-radius: 26px; }
+    .travel-home .nav-container { padding: 0 22px; }
+}
