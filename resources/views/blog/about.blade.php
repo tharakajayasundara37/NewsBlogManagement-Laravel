@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('title', 'About Us - News Blog')
+@section('body-class', 'travel-home glass-page')
+@push('page-styles')<link rel="stylesheet" href="{{ asset('css/travel-home.css') }}">@endpush
 @section('content')
 <section class="page-banner about-banner"><div><span>INDEPENDENT JOURNALISM</span><h1>About News Blog</h1><p>Clarity, context and stories that help readers understand a changing world.</p></div></section>
 

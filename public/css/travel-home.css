@@ -324,3 +324,58 @@
 }
 .travel-home .socials a:hover,
 .travel-home .socials a:focus-visible { background: #fff; border-color: #a5d8ed; }
+
+/* About and Contact share the homepage's white glass theme. */
+.glass-page { --brand: #69730e; --brand-dark: #69730e; --brand-soft: #edf7fa; --muted: #5e6d77; }
+.glass-page>main { padding-top: 150px; }
+.glass-page .page-banner,
+.glass-page .mission-visual,
+.glass-page .about-stats,
+.glass-page .leader-card,
+.glass-page .values-grid-pro article,
+.glass-page .about-cta,
+.glass-page .contact-detail-list article,
+.glass-page .contact-form-pro,
+.glass-page .faq-list details {
+    border: 1px solid #bbe8f8;
+    border-radius: 32px;
+    background: radial-gradient(ellipse at 100% 100%, #bfeeff88, transparent 57%), linear-gradient(120deg, #ffffffdc, #f2fbffc2);
+    box-shadow: 0 22px 55px #3263761c, inset 0 1px 0 #fff;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+.glass-page .page-banner { margin: 0 auto; padding: 42px 28px; color: #17212b; }
+.glass-page .page-banner::after { display: none; }
+.glass-page .page-banner h1 { color: #17212b; font: italic 700 clamp(40px, 5vw, 60px)/1.15 Georgia, serif; }
+.glass-page .page-banner span, .glass-page .section-eyebrow { color: #69730e; }
+.glass-page .page-banner p, .glass-page .about-cta p { color: #5e6d77; }
+.glass-page .about-mission h2, .glass-page .section-intro h2,
+.glass-page .contact-details h2, .glass-page .contact-form-pro h2,
+.glass-page .about-cta h2 { color: #17212b; font: italic 700 clamp(28px, 3vw, 38px)/1.2 Georgia, serif; }
+.glass-page .leader-copy h3, .glass-page .values-grid-pro h3 { font-family: Georgia, serif; color: #17212b; }
+.glass-page .mission-visual { padding: 12px; }
+.glass-page .mission-visual img { display: block; border-radius: 22px; box-shadow: none; }
+.glass-page .mission-visual>span { background: #ffffffe8; color: #5e6d77; border: 1px solid #bbe8f8; border-radius: 16px; }
+.glass-page .mission-visual>span b { color: #17212b; }
+.glass-page .about-stats>div { border-right-color: #c9e1eb; }
+.glass-page .about-stats b { color: #17212b; }
+.glass-page .about-stats span { color: #5e6d77; }
+.glass-page .leader-card { padding: 12px; }
+.glass-page .leader-image img, .glass-page .leader-placeholder { border-radius: 22px; }
+.glass-page .cta-primary, .glass-page .form-submit { background: #69730e; color: #fff; border-radius: 999px; }
+.glass-page .cta-secondary { background: #ffffffa8; color: #17212b; border: 1px solid #c9e1eb; border-radius: 999px; }
+.glass-page .contact-form-pro input, .glass-page .contact-form-pro textarea { background: #ffffffa8; border-color: #c9e1eb; border-radius: 16px; color: #17212b; }
+.glass-page .contact-social .fa-facebook-f { color: #1877f2; }
+.glass-page .contact-social .fa-x-twitter { color: #111; }
+.glass-page .contact-social .fa-instagram { color: #d62976; }
+.glass-page .contact-social .fa-linkedin-in, .glass-page .leader-social .fa-linkedin-in { color: #0a66c2; }
+@media (max-width: 700px) {
+    .glass-page>main { padding-top: 116px; }
+    .glass-page .about-shell, .glass-page .contact-shell { padding: 48px 10px 60px; }
+    .glass-page .contact-pro-grid, .glass-page .about-mission { gap: 36px; }
+    .glass-page .contact-form-pro { padding: 24px 20px; }
+    .glass-page .about-cta { padding: 35px 22px; }
+    .glass-page .about-stats { grid-template-columns: 1fr 1fr; }
+    .glass-page .about-stats>div { padding: 24px 12px; }
+    .glass-page .page-banner, .glass-page .contact-form-pro, .glass-page .leader-card { border-radius: 26px; }
+}

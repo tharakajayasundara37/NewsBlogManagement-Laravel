@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Contact Us - News Blog')
+@section('body-class', 'travel-home glass-page')
+@push('page-styles')<link rel="stylesheet" href="{{ asset('css/travel-home.css') }}">@endpush
 @section('content')
 <section class="page-banner contact-banner"><div><span>LET'S TALK</span><h1>Contact Us</h1><p>Send a story tip, ask a question or start a conversation with our newsroom.</p></div></section>
 
