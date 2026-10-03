@@ -14,7 +14,7 @@
 .travel-home>main, .travel-home>.main-footer { width: min(1380px, calc(100% - 80px)); margin: auto; }
 .travel-home>main { background: var(--travel-navy); }
 .travel-home .modern-nav {
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     top: 0;
     left: 50%;
@@ -127,7 +127,7 @@
 .travel-home .category-tag { padding: 6px 10px; border: 1px solid #e1e75c88; border-radius: 2px; background: #031e2ce6; color: var(--travel-lime); box-shadow: none; font-size: 9px; }
 .travel-home .read-more, .travel-home .read-more-btn { gap: 10px; color: var(--travel-lime); font-size: 10px; font-weight: 600; }
 .travel-home .read-more:hover, .travel-home .read-more-btn:hover { color: #424b00; }
-.travel-home .content-wrapper { grid-template-columns: minmax(0, 1fr) 285px; gap: 45px; scroll-margin-top: 30px; }
+.travel-home .content-wrapper { grid-template-columns: minmax(0, 1fr) 285px; gap: 45px; scroll-margin-top: 140px; }
 .travel-home .latest-posts .section-title { justify-content: flex-start; text-align: left; margin-bottom: 35px; }
 .travel-home .latest-posts .posts-grid { gap: 40px 28px; }
 .travel-home .post-card { overflow: visible; }
