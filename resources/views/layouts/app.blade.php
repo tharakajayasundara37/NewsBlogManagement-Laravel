@@ -12,8 +12,9 @@
     @stack('styles')
     <link rel="stylesheet" href="{{ asset('css/polish.css') }}">
     <link rel="stylesheet" href="{{ asset('css/editorial.css') }}">
+    @stack('page-styles')
 </head>
-<body>
+<body class="@yield('body-class')">
 <nav class="modern-nav" aria-label="Primary navigation">
     <div class="nav-container">
         <a class="logo-wrapper" href="{{ route('home') }}" aria-label="News Blog home">

@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('title', 'News Blog - Latest News & Updates')
+@section('body-class', 'travel-home')
 @push('styles')<link rel="stylesheet" href="{{ asset('css/homepage.css') }}">@endpush
+@push('page-styles')<link rel="stylesheet" href="{{ asset('css/travel-home.css') }}">@endpush
 @section('content')
 @php($featured = $posts->take(2))
 @php($regular = $posts->skip(2))
